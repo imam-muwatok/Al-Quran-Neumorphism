@@ -1,0 +1,118 @@
+@import 'mixins';
+a {
+    text-decoration: none;
+    box-shadow: var(--box-shadow-outside);
+}
+
+a:hover {
+    box-shadow: var(--box-shadow-outside-hover);
+}
+
+a:active {
+    box-shadow: var(--box-shadow-inside);
+}
+
+// form
+form {
+    box-shadow: var(--box-shadow-inside);
+    background-color: $bg;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 18px;
+}
+
+// input
+input:focus {
+    outline: 1px solid #999;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search]  {
+    border: 0;
+    width: 100%;
+    min-height: 1.5rem;
+    border-radius: 18px;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    display: block;
+    box-shadow: var(--box-shadow-inside);
+}
+
+label {
+    margin-bottom: .5rem;
+    text-align: left;
+    display: block;
+    // background-color: slateblue;
+}
+
+// menu
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    width: 60%;
+    display: inline !important;
+    background-color: #f6f6f6;
+    box-shadow: var(--box-shadow-outside);
+    min-height: 100vh;
+    z-index: 9999;
+    animation: openFromRight .5s ease 0s 1 normal forwards;
+    a {
+        display: block;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        text-align: center;
+        padding: .5rem;
+        color: #444;
+    }
+    p {
+        margin: 0;
+        display: inline !important;
+        text-align: right !important;
+        padding: .5rem .75rem;
+        box-shadow: var(--box-shadow-outside);
+        border-radius: 50%;
+        margin-bottom: 2rem !important;
+        cursor: pointer;
+        @include flex(right);
+    }
+
+    p:hover {
+        box-shadow: var(--box-shadow-outside-hover);
+    }
+    p:active {
+        box-shadow: var(--box-shadow-inside);
+    }
+}
+
+.menu-close{
+    animation: closeToRight 1s ease 0s 1 normal forwards;
+}
+
+@keyframes openFromRight {
+    0% {
+        transform: scaleX(0.4);
+        transform-origin: 100% 100%;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: 100% 100%;
+    }
+}
+
+@keyframes closeToRight {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

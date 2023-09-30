@@ -1,0 +1,94 @@
+@import 'colors', 'box-shadow', 'utils', 'mixins';
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background-color: $bg;
+    color: #444;
+    nav {
+        color: #444;
+        // background-color: salmon;
+        padding: 1rem 3rem;
+        box-shadow: var(--box-shadow-outside-hover);
+        @include flex(space-between);
+        .brand {
+            margin: auto 0;
+            p {
+                padding: .5rem 1rem;
+                box-shadow: var(--box-shadow-outside);
+                border-radius: 12px;
+                font-weight: 700;
+            }
+        }
+        .nav-btn {
+            display: none;
+        }
+        .nav-link,
+        .nav-link-end {
+            p {
+                display: none;
+            }
+            margin: auto 0;
+            a {
+                color: #444;
+                padding: .5rem 1rem;
+                margin-right: 1rem;
+                border-radius: 12px;
+            }
+        }
+
+        .nav-link-end {
+            margin-left: 4rem;
+        }
+    }
+
+    .hero {
+        @include flex();
+        div {
+            width: 50%;
+            text-align: center;
+        }
+        .hero-start {
+            padding: 3rem;
+            margin: auto 0;
+            form {
+                display: block;
+                .input-groub {
+                    padding: 1rem;
+                    // background-color: salmon;
+                }
+            }
+        }
+        .hero-end {
+            padding: 3rem;
+        }
+    }
+    
+}
+
+@media (max-width: 599px) {
+    nav {
+        position: relative;
+    }
+    .nav-link {
+        display: none;
+    }
+    .nav-link-end {
+        margin-top: 2rem !important;
+        width: 100%;
+        padding-left: -3rem !important;
+    }
+
+    .nav-btn {
+        display: inline !important;
+        margin: auto 0;
+        a {
+            padding: .75rem;
+            border-radius: 50%;
+        }
+    }
+
+}
