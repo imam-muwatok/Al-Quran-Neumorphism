@@ -1,55 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/equran.css">
-    <style>
-       
-
-    </style>
-</head>
-<body>
-    <!-- loder start -->
-        <div class="loader-box none">
-            <div class="loader"></div>
-        </div>
-    <!-- loader end -->
-
-    <div class="wrapper">
-        <!-- nav start -->
-        <nav>
-            <div class="brand"><a onclick="location.reload()">E-Quran</a></div>
-            <div class="nav-btn" onclick="showMenu()"><a >&#9776;</a></div>
-            <div class="nav-link">
-                <p onclick="closeMenu()">x</p>
-                <a href="#">Home</a>
-                <a href="#">Price</a>
-                <a href="#">Service</a>
-                <a href="#">Product</a>
-                <a href="#">About</a>
-            </div>
-            
-        </nav>
-        <!-- nav end -->
-
-        <!-- content start -->
-        <div class="content">
-            <div class="search-box">
-                <input type="search" id="search" placeholder="Cari Surat ...">
-            </div>
-            <div class="content-box">
-            </div>
-        </div>
-        <!-- content end -->
-    </div>
-    
-    <script>
-        const github = 'https://raw.githubusercontent.com/imam-muwatok/json/main/al-quran/surat-v2/1.json'
-        // const url = 'assets/json/daftar-surat-v2.json'
-        
-        const url = 'assets/json/daftar-surat-v2.json'
+const url = 'assets/json/daftar-surat-v2.json'
         const urlSurat = 'assets/json/surat-v2/'
         const wrapper = document.querySelector('.wrapper')
         const navLink = document.querySelector('.nav-link')
@@ -152,7 +101,3 @@
             }
             
         });
-    </script>
-    
-</body>
-</html>

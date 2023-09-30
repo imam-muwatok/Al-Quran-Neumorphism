@@ -3,71 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-quran</title>
+    <meta name="description" content="aplikasi Al-Quran, data dari Al-Qur'an kemenag" />
+    <meta name="keywords" content="HTML, CSS, SCSS" />
+    <meta name="author" content="Muhammad Imam Muwatok" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/equran.css">
+    <style>
+       
+
+    </style>
 </head>
 <body>
-    <!-- nav start -->
-    <nav>
-        <div class="brand"><p>Neumorphism</p></div>
-        <div class="nav-btn" onclick="showMenu()"><a >&#9776;</a></div>
-        <div class="nav-link">
-            <p onclick="closeMenu()">x</p>
-            <a href="#">Home</a>
-            <a href="#">Price</a>
-            <a href="#">Service</a>
-            <a href="#">Product</a>
-            <a href="#">About</a>
+    <!-- loder start -->
+        <div class="loader-box none">
+            <div class="loader"></div>
         </div>
-        
-    </nav>
-    <!-- nav end -->
+    <!-- loader end -->
 
-    <!-- hero start -->
-    <div class="hero">
-        <div class="hero-start">
-            <h3>Sing Up</h3>
-            <form action="">
-                <div class="input-groub">
-                    <label for="">User Name</label>
-                    <input type="text" placeholder="User Name">
-                </div>
-                <div class="input-groub">
-                    <label for="">Password</label>
-                    <input type="password" placeholder="Password">
-                </div>
-                <div class="input-groub-checkbox">
-                    <label for="checkPassword" ><input type="checkbox" class="input-checkbox" id="checkPassword"> Show Password</label>
-                </div>
-            </form>
+    <div class="wrapper">
+        <!-- nav start -->
+        <nav>
+            <div class="brand"><a onclick="location.reload()">E-Quran</a></div>
+            <!-- <div class="nav-btn" onclick="showMenu()"><a >&#9776;</a></div>
+            <div class="nav-link">
+                <p onclick="closeMenu()">x</p>
+                <a href="#">Home</a>
+                <a href="#">Price</a>
+                <a href="#">Service</a>
+                <a href="#">Product</a>
+                <a href="#">About</a>
+            </div> -->
+            
+        </nav>
+        <!-- nav end -->
+
+        <!-- content start -->
+        <div class="content">
+            <div class="search-box">
+                <input type="search" id="search" placeholder="Cari Surat ...">
+            </div>
+            <div class="content-box">
+            </div>
         </div>
-        <div class="hero-end">
-            <img src="https://demo.themesberg.com/neumorphism-ui/assets/img/illustrations/reading-side.svg" alt="">
-        </div>
+        <!-- content end -->
     </div>
-    <!-- hero end -->
-
-    <!-- card start -->
-    <div class="card"></div>
-    <!-- card end -->
-
-    <!-- carousels start -->
-    <!-- <div class="carousels"></div> -->
-    <!-- carousels end -->
+    <script type="text/javascript" src="./assets/js/equran.js"></script>
     
-    <script>
-        let menu = false
-        const navLink = document.querySelector('.nav-link')
-        function showMenu() {
-            navLink.classList.add('menu')
-        }
-        function closeMenu() {
-            navLink.classList.add('menu-close')
-            setTimeout(function(){
-            navLink.classList.remove('menu')
-            navLink.classList.remove('menu-close')
-        },1000);
-        }
-    </script>
 </body>
 </html>
